@@ -10,7 +10,11 @@ function Header() {
         className="flex items-center cursor-pointer"
         onClick={() => navigate('/')}
       >
-       
+        <img
+          src="logo.png"
+          alt="MenuEscape Logo"
+          className="h-[10vh] w-auto mr-3"
+        />
         <h1 className="text-white font-serif text-2xl font-bold tracking-wide">
           MenuEscape
         </h1>
