@@ -11,7 +11,7 @@ function Header() {
         onClick={() => navigate('/')}
       >
         <img
-          src="/src/assets/logo.png"
+          src="logo.png"
           alt="MenuEscape Logo"
           className="h-[10vh] w-auto mr-3"
         />
