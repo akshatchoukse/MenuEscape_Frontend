@@ -8,7 +8,7 @@ function CheckOutCart() {
     const cartList = JSON.parse(localStorage.getItem('cart'))
     const totalPrice = cartList.map((i)=> i.price * i.quantity).reduce((a, b)=> a+b)
     const postOrder = ()=>{
-        axios.post('http://localhost:5000/api/order', {
+        axios.post('https://menu-escape.onrender.com/api/order', {
             name : localStorage.getItem('name'),
             orderedFood: cartList,
             table : localStorage.getItem('tableNo')

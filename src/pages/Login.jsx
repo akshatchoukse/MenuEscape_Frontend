@@ -31,7 +31,7 @@ function Login() {
 
     setError('');
     axios
-      .post('http://localhost:5000/api/user', {
+      .post('https://menu-escape.onrender.com/api/user', {
         name,
         number,
         tableNo,
