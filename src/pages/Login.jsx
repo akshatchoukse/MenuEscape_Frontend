@@ -8,13 +8,13 @@ function Login() {
   const navigate = useNavigate();
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
-  const [tableNo, setTableNo] = useState('');
+  const [table, setTable] = useState('');
   const [error, setError] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    if (!name || !number || !tableNo) {
+    if (!name || !number || !table) {
       setError('Please fill out all fields.');
       return;
     }
@@ -24,7 +24,7 @@ function Login() {
       return;
     }
 
-    if (!/^\d+$/.test(tableNo)) {
+    if (!/^\d+$/.test(table)) {
       setError('Table number must be a valid number.');
       return;
     }
@@ -34,12 +34,12 @@ function Login() {
       .post('https://menu-escape.onrender.com/api/user', {
         name,
         number,
-        tableNo,
+        table,
       })
       .then((res) => {
         console.log(res.data);
         localStorage.setItem('name', name);
-        localStorage.setItem('tableNo', tableNo);
+        localStorage.setItem('table', table);
         localStorage.setItem('number', number);
         navigate('/menu');
       })
@@ -93,8 +93,8 @@ function Login() {
               id="table"
               className="w-full p-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-400"
               placeholder="Enter your table number"
-              value={tableNo}
-              onChange={(e) => setTableNo(e.target.value)}
+              value={table}
+              onChange={(e) => setTable(e.target.value)}
             />
           </div>
 
