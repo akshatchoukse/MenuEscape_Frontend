@@ -302,7 +302,7 @@ function Menu() {
           }
           ,
           {
-            "image": "https://sukhis.com/app/uploads/2022/04/image3-4.jpg",
+            "image": "https://images.jdmagicbox.com/quickquotes/listicle/crop_1713353493584_ky6vh_1375x648.jpg",
             "category": "South Indian",
             "foodItem": [
               {
